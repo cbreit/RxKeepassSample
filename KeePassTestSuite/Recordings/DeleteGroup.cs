@@ -83,19 +83,17 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'MainForm.Categories.CategoryRanorex' at Center.", repo.MainForm.Categories.CategoryRanorexInfo, new RecordItemIndex(0));
             repo.MainForm.Categories.CategoryRanorex.Click(System.Windows.Forms.MouseButtons.Right);
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.DeleteGroup' at Center.", repo.KeePass.DeleteGroupInfo, new RecordItemIndex(1));
             repo.KeePass.DeleteGroup.Click();
-            Delay.Milliseconds(200);
             
         }
 

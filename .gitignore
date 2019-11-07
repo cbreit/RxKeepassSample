@@ -164,4 +164,4 @@ $RECYCLE.BIN/
 [Rr]eports/
 !**/CodeModules/*
 *.rxuser
-
+*.pref

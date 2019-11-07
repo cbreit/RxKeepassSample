@@ -8,7 +8,7 @@ rxversion="9.0">
 		1
 	</repeatcount>
 	<turbomode>
-		False
+		True
 	</turbomode>
 	<genreport>
 		True

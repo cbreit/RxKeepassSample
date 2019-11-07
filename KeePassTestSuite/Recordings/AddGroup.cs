@@ -84,27 +84,23 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'MainForm.Categories.NewDatabase' at Center.", repo.MainForm.Categories.NewDatabaseInfo, new RecordItemIndex(0));
             repo.MainForm.Categories.NewDatabase.Click(System.Windows.Forms.MouseButtons.Right);
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.AddGroup' at Center.", repo.KeePass.AddGroupInfo, new RecordItemIndex(1));
             repo.KeePass.AddGroup.Click();
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varGroupName'.", new RecordItemIndex(2));
             Keyboard.Press(varGroupName);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(3));
             Keyboard.Press("{Return}");
-            Delay.Milliseconds(0);
             
         }
 

@@ -84,15 +84,14 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$varTitle) on item 'MainForm.Entry'.", repo.MainForm.EntryInfo, new RecordItemIndex(0));
             Validate.AttributeEqual(repo.MainForm.EntryInfo, "Text", varTitle);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 2s.", new RecordItemIndex(1));
             Delay.Duration(2000, false);

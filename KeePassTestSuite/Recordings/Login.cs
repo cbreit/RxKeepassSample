@@ -73,23 +73,20 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'LogIn.MasterPassword' at Center.", repo.LogIn.MasterPasswordInfo, new RecordItemIndex(0));
-            repo.LogIn.MasterPassword.Click(100);
-            Delay.Milliseconds(0);
+            repo.LogIn.MasterPassword.Click();
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '●●' with focus on 'LogIn.MasterPassword'.", repo.LogIn.MasterPasswordInfo, new RecordItemIndex(1));
             repo.LogIn.MasterPassword.PressKeys("rx");
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'LogIn.BtOK' at Center.", repo.LogIn.BtOKInfo, new RecordItemIndex(2));
-            repo.LogIn.BtOK.Click(100);
-            Delay.Milliseconds(0);
+            repo.LogIn.BtOK.Click();
             
         }
 

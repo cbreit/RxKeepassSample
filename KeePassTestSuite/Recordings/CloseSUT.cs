@@ -73,15 +73,14 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'MainForm'.", repo.MainForm.SelfInfo, new RecordItemIndex(0));
             Host.Current.CloseApplication(repo.MainForm.Self, 10000);
-            Delay.Milliseconds(0);
             
         }
 

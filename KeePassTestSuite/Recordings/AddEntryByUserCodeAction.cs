@@ -145,26 +145,22 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'MainForm.Edit' at Center.", repo.MainForm.EditInfo, new RecordItemIndex(0));
             repo.MainForm.Edit.Click();
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.AddEntry' at Center.", repo.KeePass.AddEntryInfo, new RecordItemIndex(1));
             repo.KeePass.AddEntry.Click();
-            Delay.Milliseconds(200);
             
             AddEntryWithParams(varTitle, varUsername, varPassword, "", varIconIndex, varExpires);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.ButtonOK' at Center.", repo.AddEntry.ButtonOKInfo, new RecordItemIndex(3));
             repo.AddEntry.ButtonOK.Click();
-            Delay.Milliseconds(200);
             
         }
 

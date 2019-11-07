@@ -73,29 +73,25 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'MainForm.Categories.RecycleBin' at Center.", repo.MainForm.Categories.RecycleBinInfo, new RecordItemIndex(0));
             repo.MainForm.Categories.RecycleBin.Click(System.Windows.Forms.MouseButtons.Right);
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.EmptyRecycleBin' at Center.", repo.KeePass.EmptyRecycleBinInfo, new RecordItemIndex(1));
             repo.KeePass.EmptyRecycleBin.Click();
-            Delay.Milliseconds(200);
             
             try {
                 Report.Log(ReportLevel.Info, "Mouse", "(Optional Action)\r\nMouse Left Click item 'KeePass2.ButtonDelete' at Center.", repo.KeePass2.ButtonDeleteInfo, new RecordItemIndex(2));
                 repo.KeePass2.ButtonDelete.Click();
-                Delay.Milliseconds(200);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(2)); }
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'MainForm.Categories.NewDatabase' at Center.", repo.MainForm.Categories.NewDatabaseInfo, new RecordItemIndex(3));
             repo.MainForm.Categories.NewDatabase.Click();
-            Delay.Milliseconds(200);
             
         }
 

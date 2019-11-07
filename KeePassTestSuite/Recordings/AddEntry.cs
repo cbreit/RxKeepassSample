@@ -143,99 +143,77 @@ namespace KeePassTestSuite.Recordings
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'MainForm.Edit' at Center.", repo.MainForm.EditInfo, new RecordItemIndex(0));
-            repo.MainForm.Edit.Click(100);
-            Delay.Milliseconds(0);
+            repo.MainForm.Edit.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.AddEntry' at Center.", repo.KeePass.AddEntryInfo, new RecordItemIndex(1));
-            repo.KeePass.AddEntry.Click(100);
-            Delay.Milliseconds(0);
+            repo.KeePass.AddEntry.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.Title' at Center.", repo.AddEntry.TitleInfo, new RecordItemIndex(2));
-            repo.AddEntry.Title.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.Title.Click();
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varTitle' with focus on 'AddEntry.Title'.", repo.AddEntry.TitleInfo, new RecordItemIndex(3));
             repo.AddEntry.Title.PressKeys(varTitle);
-            Delay.Milliseconds(100);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.MBtnIcon' at Center.", repo.AddEntry.MBtnIconInfo, new RecordItemIndex(4));
-            repo.AddEntry.MBtnIcon.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.MBtnIcon.Click();
             
             Report.Log(ReportLevel.Info, "Invoke action", "Invoking Select() on item 'IconPicker.LI_Icon'.", repo.IconPicker.LI_IconInfo, new RecordItemIndex(5));
             repo.IconPicker.LI_Icon.Select();
-            Delay.Milliseconds(100);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'IconPicker.ButtonClose' at Center.", repo.IconPicker.ButtonCloseInfo, new RecordItemIndex(6));
-            repo.IconPicker.ButtonClose.Click(100);
-            Delay.Milliseconds(0);
+            repo.IconPicker.ButtonClose.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.UserName' at Center.", repo.AddEntry.UserNameInfo, new RecordItemIndex(7));
-            repo.AddEntry.UserName.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.UserName.Click();
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varUsername' with focus on 'AddEntry.UserName'.", repo.AddEntry.UserNameInfo, new RecordItemIndex(8));
             repo.AddEntry.UserName.PressKeys(varUsername);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.Password' at Center.", repo.AddEntry.PasswordInfo, new RecordItemIndex(9));
-            repo.AddEntry.Password.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.Password.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'AddEntry.Password' at Center.", repo.AddEntry.PasswordInfo, new RecordItemIndex(10));
-            repo.AddEntry.Password.Click(System.Windows.Forms.MouseButtons.Right, 100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.Password.Click(System.Windows.Forms.MouseButtons.Right);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.SelectAll' at Center.", repo.KeePass.SelectAllInfo, new RecordItemIndex(11));
-            repo.KeePass.SelectAll.Click(100);
-            Delay.Milliseconds(0);
+            repo.KeePass.SelectAll.Click();
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varPassword' with focus on 'AddEntry.Password'.", repo.AddEntry.PasswordInfo, new RecordItemIndex(12));
             repo.AddEntry.Password.PressKeys(varPassword);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.Repeat' at Center.", repo.AddEntry.RepeatInfo, new RecordItemIndex(13));
-            repo.AddEntry.Repeat.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.Repeat.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'AddEntry.Repeat' at Center.", repo.AddEntry.RepeatInfo, new RecordItemIndex(14));
-            repo.AddEntry.Repeat.Click(System.Windows.Forms.MouseButtons.Right, 100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.Repeat.Click(System.Windows.Forms.MouseButtons.Right);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.SelectAll' at Center.", repo.KeePass.SelectAllInfo, new RecordItemIndex(15));
-            repo.KeePass.SelectAll.Click(100);
-            Delay.Milliseconds(0);
+            repo.KeePass.SelectAll.Click();
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varPassword' with focus on 'AddEntry.Repeat'.", repo.AddEntry.RepeatInfo, new RecordItemIndex(16));
             repo.AddEntry.Repeat.PressKeys(varPassword);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.URL' at Center.", repo.AddEntry.URLInfo, new RecordItemIndex(17));
             repo.AddEntry.URL.Click();
-            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varURL' with focus on 'AddEntry.URL'.", repo.AddEntry.URLInfo, new RecordItemIndex(18));
             repo.AddEntry.URL.PressKeys(varURL);
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.MBtnStandardExpires' at Center.", repo.AddEntry.MBtnStandardExpiresInfo, new RecordItemIndex(19));
-            repo.AddEntry.MBtnStandardExpires.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.MBtnStandardExpires.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.MI_Expires' at Center.", repo.KeePass.MI_ExpiresInfo, new RecordItemIndex(20));
-            repo.KeePass.MI_Expires.Click(100);
-            Delay.Milliseconds(0);
+            repo.KeePass.MI_Expires.Click();
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddEntry.ButtonOK' at Center.", repo.AddEntry.ButtonOKInfo, new RecordItemIndex(21));
-            repo.AddEntry.ButtonOK.Click(100);
-            Delay.Milliseconds(0);
+            repo.AddEntry.ButtonOK.Click();
             
         }
 
